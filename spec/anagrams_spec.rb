@@ -4,6 +4,6 @@ require('pry')
 
 describe('#anagrams') do
   it("verifies whether or not the two words are anagrams") do
-    expect(Check_anagrams.new("dog", "god").are_anagrams("dog", "god")).to(eq("These words are anagrams"))
+    expect(Check_anagrams.new(word_1, word_2).are_anagrams(word_1, word_2)).to(eq("These words are anagrams"))
   end
 end
