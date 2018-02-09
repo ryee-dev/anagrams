@@ -17,7 +17,9 @@ class Check_anagrams
     sorted_1 = rearrange(word_1)
     sorted_2 = rearrange(word_2)
 
-    if ((sorted_1 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false)
+    if (((sorted_1 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false) && (sorted_2 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false)
+      "Both words are not real words."
+    elsif ((sorted_1 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false)
       "The first word is not a real word."
     elsif ((sorted_2 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false)
       "The second word is not a real word."

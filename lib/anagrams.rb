@@ -28,4 +28,6 @@ class Check_anagrams
       "These words are NOT anagrams."
     end
   end
+
+  def are_antigrams(word_1, word_2)
 end
