@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 
-class Check_anagrams
+class Anagrams_and_Antigrams
+
 
   def initialize(word_1, word_2)
     @word_1 = word_1
@@ -13,7 +14,7 @@ class Check_anagrams
     sorted = conform.sort
   end
 
-  def are_anagrams(word_1, word_2)
+  def anagram_antigram(word_1, word_2)
     sorted_1 = rearrange(word_1)
     sorted_2 = rearrange(word_2)
     vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U', 'y', 'Y']
@@ -38,5 +39,5 @@ puts ""
 puts "enter second word: "
 word_2 = gets.chomp
 puts ""
-puts Check_anagrams.new(word_1, word_2).are_anagrams(word_1, word_2)
+puts Check_anagrams.new(word_1, word_2).anagram_antigram(word_1, word_2)
 puts ""

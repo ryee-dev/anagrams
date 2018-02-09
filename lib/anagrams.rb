@@ -11,9 +11,9 @@ class Check_anagrams
     conform = sorted.map(&:downcase)
   end
 
-  def are_anagrams(word_1, word_2)
-    word_1 = "dgd"
-    word_2 = "gdg"
+  def anagram_antigram(word_1, word_2)
+    word_1 = "hi"
+    word_2 = "bye"
     sorted_1 = rearrange(word_1)
     sorted_2 = rearrange(word_2)
     if (((sorted_1 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false) && (sorted_2 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false)
@@ -29,5 +29,5 @@ class Check_anagrams
     end
   end
 
-  def are_antigrams(word_1, word_2)
+  def anagram_antigram(word_1, word_2)
 end
