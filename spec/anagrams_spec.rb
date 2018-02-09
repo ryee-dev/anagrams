@@ -15,7 +15,12 @@ describe('#anagrams') do
   #   expect(Check_anagrams.new("dgd", "god").are_anagrams("dgd", "god")).to(eq("The first word is not a real word."))
   # end
 
-  it("checks whether or not the second word is real") do
-    expect(Check_anagrams.new("dgd", "god").are_anagrams("dog", "gdg")).to(eq("The second word is not a real word."))
+  # it("checks whether or not the second word is real") do
+  #   expect(Check_anagrams.new("dgd", "god").are_anagrams("dog", "gdg")).to(eq("The second word is not a real word."))
+  #   end
+
+  it("checks if either word is real") do
+    expect(Check_anagrams.new("dgd", "gdg").are_anagrams("dgd", "gdg")).to(eq("Both words are not real words."))
+    # end
   end
 end
