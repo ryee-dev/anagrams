@@ -7,9 +7,11 @@ class Check_anagrams
 
   def rearrange(word)
     letters = word.split("")
+    if (letters.include?('a', 'e', 'i', 'o', 'u', 'y') == false)
+      "Not a real word."
+    end
     sorted = letters.sort
     conform = sorted.map(&:downcase)
-
   end
 
   def are_anagrams(word_1, word_2)
