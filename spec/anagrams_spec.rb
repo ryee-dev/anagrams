@@ -8,6 +8,6 @@ describe('#anagrams') do
   end
 
   it("accounts for words that have varying capitalizations") do
-    expect(Check_anagrams.new("Dog", "God").are_anagrams("Dog", "God")).to(eq("These words are anagrams, regardless of case"))
+    expect(Check_anagrams.new("Dog", "God").are_anagrams("Dog", "God")).to(eq("These words are anagrams."))
   end
 end

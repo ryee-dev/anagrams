@@ -8,6 +8,8 @@ class Check_anagrams
   def rearrange(word)
     letters = word.split("")
     sorted = letters.sort
+    conform = sorted.map(&:downcase)
+
   end
 
   def are_anagrams(word_1, word_2)
