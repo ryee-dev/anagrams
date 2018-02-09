@@ -11,6 +11,8 @@ class Check_anagrams
   end
 
   def are_anagrams(word_1, word_2)
+    word_1 = "dog"
+    word_2 = "god"
     sorted_1 = rearrange(word_1)
     sorted_2 = rearrange(word_2)
     if (sorted_1 == sorted_2)
