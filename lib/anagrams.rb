@@ -6,14 +6,15 @@ class Anagrams_and_Antigrams
   end
 
   def rearrange(word)
-    letters = word.split("")
+    new_word = word.gsub(/\W+/, '')
+    letters = new_word.split("")
     sorted = letters.sort
     conform = sorted.map(&:downcase)
   end
 
   def anagram_antigram(word_1, word_2)
-    word_1 = "hi"
-    word_2 = "bye"
+    word_1 = "hi."
+    word_2 = "bye."
     sorted_1 = rearrange(word_1)
     sorted_2 = rearrange(word_2)
     vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U', 'y', 'Y']

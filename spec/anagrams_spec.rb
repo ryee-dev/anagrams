@@ -23,7 +23,11 @@ describe('#anagrams') do
   #   expect(Anagrams_and_Antigrams.new("dgd", "gdg").anagram_antigram("dgd", "gdg")).to(eq("Both words are not real words."))
   # end
 
-  it("checks if words are antigrams") do
-    expect(Anagrams_and_Antigrams.new("hi", "bye").anagram_antigram("hi", "bye")).to(eq("These words are antigrams."))
+  # it("checks if words are antigrams") do
+  #   expect(Anagrams_and_Antigrams.new("hi", "bye").anagram_antigram("hi", "bye")).to(eq("These words are antigrams."))
+  # end
+
+  it("removes any non-letter from input") do
+    expect(Anagrams_and_Antigrams.new("hi!", "bye!").anagram_antigram("hi!", "bye!")).to(eq("These words are antigrams."))
   end
 end

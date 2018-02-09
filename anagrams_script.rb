@@ -24,6 +24,8 @@ class Anagrams_and_Antigrams
       "The first word is not a real word."
     elsif ((sorted_2 & vowels).any? == false)
       "The second word is not a real word."
+    elsif ((sorted_1 & sorted_2).any? == false)
+      "These words are antigrams."
     elsif (sorted_1 == sorted_2)
       "These words are anagrams."
     else
@@ -39,5 +41,5 @@ puts ""
 puts "enter second word: "
 word_2 = gets.chomp
 puts ""
-puts Check_anagrams.new(word_1, word_2).anagram_antigram(word_1, word_2)
+puts Anagrams_and_Antigrams.new(word_1, word_2).anagram_antigram(word_1, word_2)
 puts ""
