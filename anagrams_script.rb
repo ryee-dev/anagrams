@@ -1,7 +1,5 @@
 #!/usr/bin/ruby
-
 class Anagrams_and_Antigrams
-
 
   def initialize(word_1, word_2)
     @word_1 = word_1
@@ -20,9 +18,9 @@ class Anagrams_and_Antigrams
     vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U', 'y', 'Y']
     if (((sorted_1 & vowels).any? == false) && (sorted_2 & vowels).any? == false)
       "Both words are not real words."
-    elsif ((sorted_1 & vowels).any? == false)
+    elsif ((sorted_1 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false)
       "The first word is not a real word."
-    elsif ((sorted_2 & vowels).any? == false)
+    elsif ((sorted_2 & ['a', 'e', 'i', 'o', 'u', 'y']).any? == false)
       "The second word is not a real word."
     elsif ((sorted_1 & sorted_2).any? == false)
       "These words are antigrams."
