@@ -40,6 +40,22 @@ describe('#anagrams') do
 
   it("checks if word_1 is a palindrome") do
     is_palindrome_1 = Anagrams_and_Antigrams.new("racecar", "nil")
-    expect(is_palindrome_1.anagram_antigram("racecar", "nil")).to(eq("The first word is a palindrome."))
+    expect(is_palindrome_1.is_palindrome("racecar", "nil")).to(eq(" first word is a palindrome."))
   end
+
+  it("checks if word_2 is a palindrome") do
+    is_palindrome_2 = Anagrams_and_Antigrams.new("nil", "racecar")
+    expect(is_palindrome_2.is_palindrome("nil", "racecar")).to(eq(" second word is a palindrome."))
+  end
+
+  it("checks if both words are palindromes") do
+    are_palindromes = Anagrams_and_Antigrams.new("racecar", "bob")
+    expect(are_palindromes.is_palindrome("racecar", "bob")).to(eq(" words are both palindromes."))
+  end
+
+  it("checks if there aren't palindromes") do
+    no_palindromes = Anagrams_and_Antigrams.new("test", "bug")
+    expect(no_palindromes.is_palindrome("test", "bug")).to(eq("re are no palindromes."))
+  end
+
 end

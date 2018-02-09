@@ -20,11 +20,24 @@ class Anagrams_and_Antigrams
     backwards = conform.reverse.join("")
   end
 
+  def is_palindrome (word_1, word_2)
+    backwards_1 = reverse_order(word_1)
+    backwards_2 = reverse_order(word_2)
+
+    if (word_1 == backwards_1 && word_2 == backwards_2)
+      " words are both palindromes."
+    elsif (word_2 == backwards_2)
+      " second word is a palindrome."
+    elsif (word_1 == backwards_1)
+    " first word is a palindrome."
+    else
+      "re are no palindromes."
+    end
+  end
+
   def anagram_antigram(word_1, word_2)
     sorted_1 = rearrange(word_1)
     sorted_2 = rearrange(word_2)
-    backwards_1 = reverse_order(word_1)
-    backwards_2 = reverse_order(word_2)
 
     vowels = ['a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U', 'y', 'Y']
 
@@ -34,12 +47,6 @@ class Anagrams_and_Antigrams
       "The first word is not a real word."
     elsif ((sorted_2 & vowels).any? == false)
       "The second word is not a real word."
-    elsif (word_1 == backwards_1 && word_2 == backwards_2)
-      "Both words are palindromes"
-    elsif (word_1 == backwards_1)
-      "The first word is a palindrome."
-    elsif (word_2 == backwards_2)
-      "The second word is a palindrome."
     elsif ((sorted_1 & sorted_2).any? == false)
       "These words are antigrams."
     elsif (sorted_1 == sorted_2)
